@@ -1,0 +1,2 @@
+class AddRestaurantToListsController < ApplicationController
+end
