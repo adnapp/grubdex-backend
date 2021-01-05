@@ -12,4 +12,5 @@ class RestaurantsController < ApplicationController
         render json: restaurant
     end
 
+
 end
