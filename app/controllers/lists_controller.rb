@@ -4,4 +4,11 @@ class ListsController < ApplicationController
         render json: list
     end
 
+    def index 
+        lists = List.all 
+        render json: lists 
+    end
+
+
+
 end

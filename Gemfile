@@ -51,3 +51,5 @@ gem 'http'
 gem 'dotenv-rails'
 
 # gem "jwt"
+
+gem 'figaro'

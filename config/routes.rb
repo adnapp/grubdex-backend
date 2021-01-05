@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :users, only: [:show]
-  resources :restaurants, only: [:show]
-  resources :lists, only: [:show]
+  # resources :users, only: [:show, :index]
+  # resources :restaurants, only: [:show, :index]
+  # resources :lists, only: [:show]
 
+  get "/users", to: "users#index"
+  get "/users/:id", to: "users#show"
 
+  get "/restaurants", to: "restaurants#index"
+  get "/restaurants/:id", to: "restaurants#show"
+
+  get "/lists", to: "lists#index"
 
 end

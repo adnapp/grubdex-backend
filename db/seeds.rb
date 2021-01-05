@@ -22,14 +22,8 @@ default_location = 'nyc'
 search_limit = 5
 @url = "https://api.yelp.com/v3/businesses/search"
 
-# byebug
 
-# configuration = Yelp::Fusion.client.configure do |config|
-#     config.api_key = apiKey
-#   end
-#   byebug
-#   configuration.search('San Francisco', { term: 'food' })
-
+# this is preseeded data in our env
 def self.search 
     params = {
         term: 'chinese',
@@ -54,14 +48,17 @@ List.create(title:"NYC Italian list", description: "Pizza and pasta in nyc", use
 List.create(title:"Pasta list", description: "Good Pasta", user: User.second)
 
 
-Restaurant.create(name:"Romeo's Pizza", cuisine:"italian", address:"123 B ave", image_url: "Picture Here", website_url: "www.google.com")
-Restaurant.create(name:"Pasta Palace", cuisine:"italian", address:"123 Ocean ave", image_url: "Picture Here", website_url: "www.google.com")
+# Restaurant.create(name:"Romeo's Pizza", cuisine:"italian", address:"123 B ave", image_url: "Picture Here", website_url: "www.google.com")
+# Restaurant.create(name:"Pasta Palace", cuisine:"italian", address:"123 Ocean ave", image_url: "Picture Here", website_url: "www.google.com")
 
 r1 = Restaurant.first 
 r2 = Restaurant.second
+r3 = Restaurant.third
 
 l1 = List.first
 l2 = List.second
 
 AddRestaurantToList.create(restaurant: r1, list: l1)
 AddRestaurantToList.create(restaurant: r2, list: l2)
+AddRestaurantToList.create(restaurant: r3, list: l1)
+
