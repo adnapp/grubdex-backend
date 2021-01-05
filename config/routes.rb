@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get "/lists/:id", to: "lists#show"
   post "/lists", to: "lists#create"
 
+  post "/log_me_in", to: "users#log_me_in"
 
 end
