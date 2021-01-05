@@ -9,6 +9,20 @@ class ListsController < ApplicationController
         render json: lists 
     end
 
+    def create 
+        list = List.create(list_params)
+        # byebug
+        render json: list
+    end
+
+
+
+    private 
+
+    def list_params 
+        params.permit(:title, :description, :restaurants, :user)
+    end
+
 
 
 end
