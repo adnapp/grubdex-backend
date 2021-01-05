@@ -20,7 +20,7 @@ class ListsController < ApplicationController
     private 
 
     def list_params 
-        params.permit(:title, :description, :restaurants, :user)
+        params.permit(:title, :description, :restaurants, :user_id)
     end
 
 

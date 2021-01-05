@@ -17,6 +17,7 @@ AddRestaurantToList.destroy_all
 
 
 @apiKey = ENV['API_KEY']
+# byebug
 default_term = 'chinese'
 default_location = 'nyc'
 search_limit = 5
@@ -34,7 +35,7 @@ def self.search
     response.parse 
     # byebug
 end
-
+# byebug
 self.search["businesses"].each do |business|
     Restaurant.create_restaurant_data(business)
 end
@@ -54,6 +55,7 @@ List.create(title:"Pasta list", description: "Good Pasta", user: User.second)
 r1 = Restaurant.first 
 r2 = Restaurant.second
 r3 = Restaurant.third
+r4 = Restaurant.fourth
 
 l1 = List.first
 l2 = List.second
@@ -61,4 +63,5 @@ l2 = List.second
 AddRestaurantToList.create(restaurant: r1, list: l1)
 AddRestaurantToList.create(restaurant: r2, list: l2)
 AddRestaurantToList.create(restaurant: r3, list: l1)
+AddRestaurantToList.create(restaurant:r4, list: l1)
 
