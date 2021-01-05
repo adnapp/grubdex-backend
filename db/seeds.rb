@@ -42,15 +42,9 @@ def self.search
 end
 
 self.search["businesses"].each do |business|
-    byebug
     Restaurant.create_restaurant_data(business)
 end
 
-
-
-# rest_api = RestClient.get 'https://api.yelp.com/v3/businesses/search' #, headers: {Authorization: "Bearer zDUILeWbckII7S0_4mBg_cb0cxlMULRHdpvoCLKvaXrXhaJZ7PV6TaHmnqBmp0MKv4CfyNw6p3sc5_bzXeqFvjK7nhcdDJmsL2010BgGrnEIQohYqrI_vJod7JvzX3Yx"}
-
-# rest_api = RestClient.get 'https://api.yelp.com/v3/businesses/search', headers: {'Authorization': "Bearer zDUILeWbckII7S0_4mBg_cb0cxlMULRHdpvoCLKvaXrXhaJZ7PV6TaHmnqBmp0MKv4CfyNw6p3sc5_bzXeqFvjK7nhcdDJmsL2010BgGrnEIQohYqrI_vJod7JvzX3Yx"}
 
 
 User.create(name:"Chelsey", home_city:"NYC", bio: "Foodie at Heart")
