@@ -48,5 +48,6 @@ gem 'rest-client'
 gem 'yelp-fusion', require: 'yelp/fusion'
 
 gem 'http'
+gem 'dotenv-rails'
 
 # gem "jwt"

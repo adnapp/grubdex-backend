@@ -16,7 +16,7 @@ AddRestaurantToList.destroy_all
 
 
 
-@apiKey = '-_VDsofuyKfRWdGv-k-tKLD1gH7hQ_8-XFDc48E3x-5CCKSbjpvj2nx0N7rxH0yBKqe5gaxJQpv4VFwzAoIbz7zePTnbgyBTUAMseSziUco7_aRAD32C90Hu4SfzX3Yx'
+@apiKey = ENV['API_KEY']
 default_term = 'chinese'
 default_location = 'nyc'
 search_limit = 5
