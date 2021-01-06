@@ -15,7 +15,11 @@ class ListsController < ApplicationController
         render json: list
     end
 
-    
+    def update
+        list = List.find(params[:id])
+        list.update(list_params)
+        render json: list
+    end 
 
 
 
