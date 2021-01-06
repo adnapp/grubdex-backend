@@ -1,10 +1,26 @@
 class AddRestaurantToListsController < ApplicationController
 
-    def destroy
-        @restaurant = AddRestaurantToList.find_by(params[:id])
-        @restaurant.destroy
-    end 
 
+    def index 
+        @restsonlists = AddRestaurantToList.all 
+        render json: @restsonlists
+
+    end 
+    
+    def show 
+    restaurantlist = AddRestaurantToList.find(params[:id])
+    render json: restaurantlist
+    end
+
+    def destroy
+        # byebug
+        @restaurant = AddRestaurantToList.find(params[:id])
+        @restaurant.destroy
+        # render json: @restaurant
+    end 
+    
+  
+        
 
 
 

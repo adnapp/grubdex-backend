@@ -16,8 +16,11 @@ Rails.application.routes.draw do
   get "/lists/:id", to: "lists#show"
   post "/lists", to: "lists#create"
   delete "/lists/:id", to: "lists#destroy"
+  
 
   delete "/AddRestaurantToLists/:id", to: "add_restaurant_to_lists#destroy"
+  get "/AddRestaurantToLists/", to: "add_restaurant_to_lists#index"
+  get "/AddRestaurantToLists/:id", to: "add_restaurant_to_lists#show"
 
   post "/log_me_in", to: "users#log_me_in"
 
