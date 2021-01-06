@@ -19,9 +19,18 @@ class AddRestaurantToListsController < ApplicationController
         # render json: @restaurant
     end 
     
+    def create 
+        addRestaurantToList = AddRestaurantToList.create(add_restautant_to_list_params)
+        # byebug
+        render json: addRestaurantToList
+    end
   
         
+    private 
 
+    def add_restautant_to_list_params 
+        params.permit(:restaurant_id, :list_id)
+    end
 
 
 end
