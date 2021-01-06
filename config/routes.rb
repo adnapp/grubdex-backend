@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "/lists/:id", to: "lists#show"
   post "/lists", to: "lists#create"
   delete "/lists/:id", to: "lists#destroy"
+  patch "/lists/:id", to: "lists#update"
   
 
   delete "/AddRestaurantToLists/:id", to: "add_restaurant_to_lists#destroy"

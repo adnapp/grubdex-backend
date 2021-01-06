@@ -15,10 +15,9 @@ class ListsController < ApplicationController
         render json: list
     end
 
-    
-    def destroy
+    def update
         list = List.find(params[:id])
-        list.destroy
+        list.update(list_params)
         render json: list
     end 
 
