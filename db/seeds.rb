@@ -20,7 +20,6 @@ AddRestaurantToList.destroy_all
 # byebug
 default_term = 'chinese'
 default_location = 'nyc'
-search_limit = 5
 @url = "https://api.yelp.com/v3/businesses/search"
 
 
@@ -29,14 +28,14 @@ def self.search
     params = {
         term: 'chinese',
         location: "NYC",
-        limit: 5
+        limit: 10
     }
     response = HTTP.auth("Bearer #{@apiKey}").get(@url, params: params)
     response.parse 
-    # byebug
 end
 # byebug
 self.search["businesses"].each do |business|
+    # byebug
     Restaurant.create_restaurant_data(business)
 end
 
