@@ -26,9 +26,9 @@ default_location = 'nyc'
 # this is preseeded data in our env
 def self.search 
     params = {
-        term: 'chinese',
+        term: 'restaurants',
         location: "NYC",
-        limit: 10
+        limit: 30
     }
     response = HTTP.auth("Bearer #{@apiKey}").get(@url, params: params)
     response.parse 
