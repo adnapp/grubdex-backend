@@ -11,8 +11,14 @@ class ListsController < ApplicationController
 
     def create 
         list = List.create(list_params)
-        # byebug
-        render json: list
+        
+        if list.valid?
+            render json: list
+        else 
+            # display error
+            byebug
+            flash[:my_errors] = planet.errors.full_messages
+        end
     end
 
     def update
