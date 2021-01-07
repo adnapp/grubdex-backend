@@ -16,7 +16,7 @@ class AddRestaurantToListsController < ApplicationController
         # byebug
         @restaurant = AddRestaurantToList.find(params[:id])
         @restaurant.destroy
-        # render json: @restaurant
+        render json: @restaurant
     end 
     
     def create 
