@@ -16,7 +16,7 @@ class ListsController < ApplicationController
             render json: list
         else 
             # display error
-            byebug
+            # byebug
             flash[:my_errors] = planet.errors.full_messages
         end
     end
